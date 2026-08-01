@@ -1,0 +1,290 @@
+<!-- 907bcf4b2f64148a -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Carregando...</title>
+    
+    <style>
+        :root {
+            --primary-color: #5D4037;
+            --secondary-color: #7CB342;
+            --accent-color: #D4A574;
+            --text-dark: #2E1F1B;
+            --text-light: #6B5D57;
+            --bg-light: #FDF6E7;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --success-color: #558B2F;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); background-color: var(--white); line-height: 1.6; scroll-behavior: smooth; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .ahw3_nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .ahw3_logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; letter-spacing: 1px; }
+        .ahw3_logo span { color: var(--secondary-color); }
+        .ahw3_nav-menu { display: flex; list-style: none; gap: 20px; }
+        .ahw3_nav-menu a { text-decoration: none; color: var(--text-light); font-weight: 500; transition: color 0.3s; }
+        .ahw3_nav-menu a:hover { color: var(--secondary-color); }
+        .ahw3_hero { background: linear-gradient(135deg, #FDF6E7 0%, #F0E4CC 100%); padding: 80px 20px; text-align: center; }
+        .ahw3_hero-content { max-width: 800px; margin: 0 auto; }
+        .ahw3_hero h1 { font-size: 2.7rem; color: var(--primary-color); margin-bottom: 20px; }
+        .ahw3_hero h1 em { font-style: normal; color: var(--secondary-color); font-weight: 700; }
+        .ahw3_hero p { font-size: 1.15rem; color: var(--text-light); margin-bottom: 30px; }
+        .ahw3_btn { display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 15px 35px; border-radius: var(--border-radius); text-decoration: none; font-weight: 700; transition: background 0.3s, transform 0.2s; border: none; cursor: pointer; font-size: 1rem; }
+        .ahw3_btn:hover { background-color: #4E342E; transform: translateY(-2px); }
+        .ahw3_collections-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .ahw3_section-title { text-align: center; color: var(--primary-color); font-size: 2rem; margin-bottom: 15px; font-weight: 700; }
+        .ahw3_section-subtitle { text-align: center; color: var(--text-light); max-width: 620px; margin: 0 auto 40px auto; font-size: 1.05rem; }
+        .ahw3_collections-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 30px; }
+        .ahw3_collection-card { background: var(--white); border: 1px solid #E5D4B8; border-radius: var(--border-radius); padding: 30px 25px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 3px solid var(--accent-color); }
+        .ahw3_collection-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); border-top-color: var(--secondary-color); }
+        .ahw3_collection-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .ahw3_collection-card h3 { color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px; }
+        .ahw3_collection-card p { color: var(--text-light); font-size: 0.95rem; }
+        .ahw3_trust-section { background-color: #FDF6E7; padding: 60px 20px; }
+        .ahw3_trust-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .ahw3_trust-card { background: var(--white); padding: 30px; border-radius: var(--border-radius); border: 1px solid #E5D4B8; box-shadow: 0 4px 12px rgba(0,0,0,0.01); border-left: 4px solid var(--secondary-color); }
+        .ahw3_trust-card h3 { color: var(--primary-color); margin-bottom: 12px; font-size: 1.25rem; display: flex; align-items: center; gap: 10px; }
+        .ahw3_trust-card h3::before { content: "✓"; color: var(--accent-color); font-weight: bold; font-size: 1.4rem; }
+        .ahw3_trust-card p { color: var(--text-light); font-size: 0.95rem; }
+        .ahw3_disclosure-section { background-color: var(--white); padding: 60px 20px; border-top: 1px solid #E5D4B8; }
+        .ahw3_disclosure-container { max-width: 1200px; margin: 0 auto; }
+        .ahw3_disclosure-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: var(--white); border-radius: var(--border-radius); overflow: hidden; border: 1px solid #E5D4B8; }
+        .ahw3_disclosure-table th, .ahw3_disclosure-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #E5D4B8; }
+        .ahw3_disclosure-table th { background-color: #EEE4D0; color: var(--primary-color); font-weight: 700; }
+        .ahw3_disclosure-note { font-size: 0.85rem; color: var(--text-light); text-align: justify; background: var(--bg-light); padding: 20px; border-radius: var(--border-radius); border: 1px solid #E5D4B8; }
+        .ahw3_contact-section { background: linear-gradient(135deg, var(--primary-color) 0%, #3E2723 100%); color: var(--white); padding: 60px 20px; }
+        .ahw3_contact-container { max-width: 550px; margin: 0 auto; }
+        .ahw3_contact-form { background: var(--white); padding: 40px; border-radius: var(--border-radius); box-shadow: 0 10px 25px rgba(0,0,0,0.15); color: var(--text-dark); }
+        .ahw3_form-group { margin-bottom: 20px; }
+        .ahw3_form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-color); font-size: 0.9rem; }
+        .ahw3_form-group input, .ahw3_form-group select, .ahw3_form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid #C9B79C; border-radius: var(--border-radius); font-size: 1rem; outline: none; transition: border-color 0.3s; font-family: inherit; }
+        .ahw3_form-group textarea { resize: vertical; min-height: 90px; }
+        .ahw3_form-group input:focus, .ahw3_form-group select:focus, .ahw3_form-group textarea:focus { border-color: var(--secondary-color); }
+        .ahw3_success-message { display: none; background-color: #F1F8E9; border: 2px solid var(--success-color); color: var(--primary-color); padding: 30px; border-radius: var(--border-radius); text-align: center; }
+        .ahw3_success-message h3 { margin-bottom: 10px; color: #33691E; }
+        footer { background-color: #2E1F1B; color: #B5A796; padding: 60px 20px 20px 20px; font-size: 0.9rem; border-top: 3px solid var(--accent-color); }
+        .ahw3_footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .ahw3_footer-brand h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 15px; }
+        .ahw3_footer-links h4, .ahw3_footer-contact h4 { color: var(--white); margin-bottom: 15px; }
+        .ahw3_footer-links ul { list-style: none; }
+        .ahw3_footer-links ul li { margin-bottom: 10px; }
+        .ahw3_footer-links ul li a { color: #B5A796; text-decoration: none; transition: color 0.3s; }
+        .ahw3_footer-links ul li a:hover { color: var(--accent-color); }
+        .ahw3_footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 30px; border-top: 1px solid #5D4037; text-align: center; font-size: 0.8rem; }
+        @media (max-width: 768px) {
+            .ahw3_nav-container { flex-direction: column; gap: 15px; }
+            .ahw3_hero h1 { font-size: 2rem; }
+            .ahw3_disclosure-table { display: block; overflow-x: auto; }
+            .ahw3_contact-form { padding: 25px; }
+        }
+    </style>
+
+<link rel="canonical" href="https://merceariaviana.online/">
+<meta name="description" content="Visite merceariaviana.online e acesse conteúdo original. Informações detalhadas e atualizadas sobre este assunto.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://merceariaviana.online/">
+<meta property="og:site_name" content="merceariaviana.online">
+<meta property="og:description" content="Visite merceariaviana.online e acesse conteúdo original. Informações detalhadas e atualizadas sobre este assunto.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="merceariaviana.online">
+<meta name="generator" content="cms-a6d2c5c8b319">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Merceariaviana","url":"https://merceariaviana.online/","datePublished":"2025-07-17","dateModified":"2025-11-15","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Merceariaviana","url":"https://merceariaviana.online/"},"publisher":{"@type":"Organization","name":"Merceariaviana","url":"https://merceariaviana.online/"}}</script>
+
+<style>:root{--jxgr-p:rgb(51,170,177);--jxgr-s:rgb(172,241,201);--jxgr-id:'51c05aa4a7fc'}@keyframes xixjxbtk{from{opacity:1}to{opacity:1}}.egcbuk{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}</style>
+<!-- b:encemtvqzo v1.62.814 -->
+</head>
+<body data-s="db3efb89" data-p="rdx0ic">
+<noscript><div style="padding:20px;text-align:center;"><p>Para uma melhor experiência em merceariaviana, ative o JavaScript no seu navegador.</p></div></noscript>
+    <header>
+        <nav class="ahw3_nav-container">
+            <a href="#" class="ahw3_logo" id="header-logo"></a>
+            <ul class="ahw3_nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#secoes">Seções</a></li>
+                <li><a href="#confianca">Nossa História</a></li>
+                <li><a href="#garantias">Informações</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="ahw3_hero" id="home">
+        <div class="ahw3_hero-content">
+            <h1>Meio Século de Tradição no <em>Centro</em> de Curitiba</h1>
+            <p id="hero-description"></p>
+            <a href="#contato" class="ahw3_btn">Fale com a Gente</a>
+        </div>
+    </section>
+
+    <section class="ahw3_collections-section" id="secoes">
+        <h2 class="ahw3_section-title">Nossas Seções</h2>
+        <p class="ahw3_section-subtitle">Uma mercearia de bairro, no coração do centro, com balcão de frios, prateleiras cheias e o atendimento personalizado que só quem faz isso há décadas consegue oferecer.</p>
+        <div class="ahw3_collections-grid">
+            <div class="ahw3_collection-card"><div class="ahw3_collection-icon">🛒</div><h3>Cesta Básica e Mantimentos</h3><p>Arroz, feijão, açúcar, óleo, farinhas, massas, sal, café e todos os itens do dia a dia — em marcas tradicionais e opções para diferentes bolsos.</p></div>
+            <div class="ahw3_collection-card"><div class="ahw3_collection-icon">🧀</div><h3>Frios e Laticínios</h3><p>Queijos, presuntos, mortadelas, salames e embutidos cortados na hora em nosso balcão, além de leite, iogurtes, manteigas e requeijões.</p></div>
+            <div class="ahw3_collection-card"><div class="ahw3_collection-icon">🥖</div><h3>Padaria e Café da Manhã</h3><p>Pães, biscoitos, bolachas, achocolatados, geleias, mel, granolas e cafés torrados e moídos para começar bem o dia.</p></div>
+            <div class="ahw3_collection-card"><div class="ahw3_collection-icon">🧼</div><h3>Higiene e Limpeza</h3><p>Sabão em pó, detergentes, desinfetantes, papéis higiênicos, sabonetes, xampus e produtos de higiene pessoal e cuidados da casa.</p></div>
+            <div class="ahw3_collection-card"><div class="ahw3_collection-icon">🥫</div><h3>Bebidas e Enlatados</h3><p>Refrigerantes, sucos, águas, cervejas em lata, conservas em geral, molhos, azeitonas e enlatados de todos os tipos.</p></div>
+            <div class="ahw3_collection-card"><div class="ahw3_collection-icon">📰</div><h3>Bomboniere, Revistas e Tabacaria</h3><p>Balas, chocolates, chicletes, jornais do dia, revistas e produtos regulamentados de tabacaria (venda restrita a maiores de 18 anos, conforme legislação).</p></div>
+        </div>
+    </section>
+
+    <section class="ahw3_trust-section" id="confianca">
+        <h2 class="ahw3_section-title">Nossa História</h2>
+        <p class="ahw3_section-subtitle">Desde 1976 na Rua Cândido Lopes, no Centro de Curitiba — meio século servindo três gerações de moradores, comerciantes e trabalhadores da região central da capital paranaense.</p>
+        <div class="ahw3_trust-grid">
+            <div class="ahw3_trust-card"><h3>50 Anos de Tradição</h3><p>Uma casa que atravessou décadas de transformações no comércio de bairro, mantendo a clientela pela variedade do estoque, procedência dos produtos e conhecimento dos clientes pelo nome — o que se perdeu na maioria dos supermercados grandes.</p></div>
+            <div class="ahw3_trust-card"><h3>Balcão de Frios Próprio</h3><p>Nosso balcão de frios e laticínios é operado por quem entende do assunto, com queijos, presuntos, mortadelas e salames cortados na hora em conformidade com as normas sanitárias vigentes.</p></div>
+            <div class="ahw3_trust-card"><h3>Atendimento de Vizinhança</h3><p>Aqui você não pega senha nem espera na fila do caixa self-service. É atendimento no balcão, com quem conhece o produto, ajuda a escolher, sugere e prepara a sua compra com o cuidado de sempre.</p></div>
+        </div>
+    </section>
+
+    <section class="ahw3_disclosure-section" id="garantias">
+        <div class="ahw3_disclosure-container">
+            <h2 class="ahw3_section-title">Informações ao Consumidor</h2>
+            <p class="ahw3_section-subtitle">Em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990), com a Resolução RDC ANVISA nº 216/2004 para manipulação de alimentos, com a Lei nº 9.294/1996 (venda de produtos derivados do tabaco) e com o Estatuto da Criança e do Adolescente:</p>
+            <table class="ahw3_disclosure-table">
+                <thead><tr><th>Item</th><th>Condição / Prazo</th><th>Observações Adicionais</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Garantia Legal</strong></td><td><strong>30 dias</strong> a partir da compra</td><td>Prevista no art. 26 do CDC para vícios aparentes em produtos alimentícios (não duráveis).</td></tr>
+                    <tr><td><strong>Frios e Laticínios</strong></td><td>RDC ANVISA nº 216/2004</td><td>Manipulação, corte, embalagem e armazenamento em conformidade com as Boas Práticas para Serviços de Alimentação.</td></tr>
+                    <tr><td><strong>Prazo de Validade</strong></td><td>Verificado no ato da compra</td><td>Recomendamos que o consumidor confira o prazo de validade impresso nas embalagens antes de sair da loja.</td></tr>
+                    <tr><td><strong>Trocas por Vício</strong></td><td>Até <strong>7 dias</strong> com nota fiscal</td><td>Produto lacrado, dentro do prazo de validade e acompanhado do comprovante de compra.</td></tr>
+                    <tr><td><strong>Produtos de Tabacaria</strong></td><td>Venda restrita — Lei nº 9.294/1996</td><td>Cigarros e produtos derivados do tabaco vendidos apenas a maiores de 18 anos mediante apresentação de documento com foto (art. 81 do ECA).</td></tr>
+                    <tr><td><strong>Alvará Sanitário</strong></td><td>Vigilância Sanitária Municipal</td><td>Estabelecimento com licença sanitária vigente para o CNAE de minimercado, mercearia e comércio de laticínios e frios.</td></tr>
+                    <tr><td><strong>Horário de Funcionamento</strong></td><td>Segunda a sábado</td><td>Horário afixado na entrada do estabelecimento, com variações informadas aos clientes em feriados.</td></tr>
+                    <tr><td><strong>Formas de Pagamento</strong></td><td>Dinheiro, cartão, PIX e vale-alimentação</td><td>Aceitamos as principais bandeiras de crédito e débito, PIX no balcão e vales-alimentação conforme convênios.</td></tr>
+                </tbody>
+            </table>
+            <div class="ahw3_disclosure-note" id="disclosure-example-note"></div>
+        </div>
+    </section>
+
+    <section class="ahw3_contact-section" id="contato">
+        <div class="ahw3_contact-container">
+            <h2 class="ahw3_section-title" style="color: var(--white);">Fale com a Gente</h2>
+            <p class="ahw3_section-subtitle" style="color: #B5A796;">Preencha o formulário e retornaremos em até 2 horas úteis com informações sobre produtos, disponibilidade em estoque ou encomendas especiais.</p>
+            <form class="ahw3_contact-form" id="lead-form">
+                <div class="ahw3_form-group"><label for="form-name">Nome Completo</label><input type="text" id="form-name" placeholder="Ex: Ana Souza" required></div>
+                <div class="ahw3_form-group"><label for="form-email">E-mail</label><input type="email" id="form-email" placeholder="Ex: ana@email.com" required></div>
+                <div class="ahw3_form-group"><label for="form-phone">Telefone / WhatsApp</label><input type="tel" id="form-phone" placeholder="Ex: (41) 99999-0000" required></div>
+                <div class="ahw3_form-group">
+                    <label for="form-intent">Assunto</label>
+                    <select id="form-intent" required>
+                        <option value="">Selecione um assunto...</option>
+                        <option value="cesta">Cesta Básica e Mantimentos</option>
+                        <option value="frios">Frios e Laticínios</option>
+                        <option value="padaria">Padaria e Café da Manhã</option>
+                        <option value="limpeza">Higiene e Limpeza</option>
+                        <option value="bebidas">Bebidas e Enlatados</option>
+                        <option value="bomboniere">Bomboniere e Revistas</option>
+                        <option value="encomenda">Encomenda Especial</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="ahw3_form-group"><label for="form-message">Detalhes (opcional)</label><textarea id="form-message" placeholder="Ex: produto específico, marca preferida, quantidade..."></textarea></div>
+                <button type="submit" class="ahw3_btn" style="width: 100%; margin-top: 10px;">Enviar</button>
+            </form>
+            <div class="ahw3_success-message" id="form-success">
+                <h3>✓ Mensagem Recebida!</h3>
+                <p>Olá, <strong id="user-name-span"></strong>. Sua mensagem foi registrada.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-light);">Retornaremos em breve pelo canal indicado.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ahw3_footer-container">
+            <div class="ahw3_footer-brand" id="footer-brand-info"></div>
+            <div class="ahw3_footer-links">
+                <h4>Políticas e Termos</h4>
+                <ul>
+                    <li><a id="link-privacy" href="#" target="_blank">Política de Privacidade</a></li>
+                    <li><a id="link-terms" href="#" target="_blank">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="ahw3_footer-contact" id="footer-contact-info"></div>
+        </div>
+        <div class="ahw3_footer-bottom">
+            <p id="footer-correspondent-law"></p>
+            <p style="margin-top: 10px;">&copy; <span id="copyright-year"></span> <span id="copyright-legal-name"></span>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const CONFIG = {
+            tradeName: "Mercearia Viana",
+            legalName: "Gilmar Veronese & Cia LTDA",
+            cnpj: "77.383.552/0001-50",
+            address: "R. Cândido Lopes, 38, Centro, Curitiba – PR, CEP 80020-060",
+            phone: "(41) 3222-8992",
+            email: "contato@merceariaviana.com.br",
+            privacyUrl: "https://merceariaviana.com.br/privacidade.html",
+            termsUrl: "https://merceariaviana.com.br/termos.html",
+            segment: "Minimercado, Mercearia e Comércio de Laticínios, Frios, Bomboniere e Tabacaria"
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('page-title').innerText = `${CONFIG.tradeName} | Mercearia Tradicional no Centro de Curitiba desde 1976`;
+            document.getElementById('page-description').setAttribute('content', `${CONFIG.tradeName} — mercearia de bairro no Centro de Curitiba com 50 anos de tradição. Cesta básica, frios, laticínios, bomboniere e atendimento de vizinhança.`);
+            
+            const nameParts = CONFIG.tradeName.split(' ');
+            const firstWord = nameParts[0];
+            const restOfName = nameParts.slice(1).join(' ');
+            document.getElementById('header-logo').innerHTML = restOfName
+                ? `${firstWord}<span> ${restOfName}</span>`
+                : firstWord;
+
+            document.getElementById('hero-description').innerHTML = `Desde 1976 na Rua Cândido Lopes, no Centro de Curitiba, mantendo o jeito de mercearia de bairro — com balcão de frios cortados na hora, prateleiras variadas de mantimentos, bomboniere completa e o atendimento personalizado que virou raridade no comércio de hoje.`;
+            
+            document.getElementById('disclosure-example-note').innerHTML = `<strong>Observações sobre manipulação de alimentos, tabacaria e responsabilidade:</strong> <br> Frios, laticínios e produtos manipulados em nosso balcão seguem as Boas Práticas para Serviços de Alimentação da ANVISA (RDC nº 216/2004), com controle de temperatura, higienização de utensílios e equipe treinada. Produtos derivados do tabaco são comercializados exclusivamente para maiores de 18 anos, mediante apresentação de documento oficial com foto, em conformidade com a Lei nº 9.294/1996 e o Estatuto da Criança e do Adolescente (ECA - Lei nº 8.069/1990). Não fazemos propaganda direta de produtos de tabaco em nossas mídias, seguindo as restrições legais aplicáveis ao setor. Estabelecimento com Alvará Sanitário vigente emitido pela Prefeitura Municipal de Curitiba.`;
+
+            document.getElementById('footer-brand-info').innerHTML = `
+                <h4>${CONFIG.tradeName}</h4>
+                <p><strong>${CONFIG.legalName}</strong></p>
+                <p>CNPJ: ${CONFIG.cnpj}</p>
+                <br>
+                <p>Endereço: ${CONFIG.address}</p>
+            `;
+
+            document.getElementById('link-privacy').href = CONFIG.privacyUrl;
+            document.getElementById('link-terms').href = CONFIG.termsUrl;
+
+            document.getElementById('footer-contact-info').innerHTML = `
+                <h4>Atendimento</h4>
+                <p>Telefone: ${CONFIG.phone}</p>
+                <p>E-mail: <a href="mailto:${CONFIG.email}" style="color: #B5A796; text-decoration: none;">${CONFIG.email}</a></p>
+            `;
+
+            document.getElementById('footer-correspondent-law').innerHTML = `A <strong>${CONFIG.tradeName}</strong> (${CONFIG.legalName}) atua no ramo de ${CONFIG.segment.toLowerCase()}, em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990), com a Resolução RDC ANVISA nº 216/2004 para manipulação de alimentos, com a Lei nº 9.294/1996 (restrições à publicidade e venda de produtos derivados do tabaco), com o Estatuto da Criança e do Adolescente (Lei nº 8.069/1990) e com as normas da Vigilância Sanitária Municipal de Curitiba. Imagens meramente ilustrativas. Preços e disponibilidade sujeitos a confirmação no balcão da loja.`;
+
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            document.getElementById('copyright-legal-name').textContent = CONFIG.legalName;
+
+            initFormSubmission();
+        });
+
+        function initFormSubmission() {
+            const form = document.getElementById('lead-form');
+            const successBox = document.getElementById('form-success');
+            const userNameSpan = document.getElementById('user-name-span');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const inputName = document.getElementById('form-name').value;
+                userNameSpan.innerText = inputName;
+                form.style.display = 'none';
+                successBox.style.display = 'block';
+            });
+        }
+    </script>
+<footer style="text-align:center;padding:22px 15px;font-size:10px;color:#b0b0b0;margin-top:45px;border-top:1px solid #e8e8e8"><p>Copyright © 2026 Merceariaviana. Conteúdo protegido. As informações nesta página são de caráter informativo. | <a href="https://merceariaviana.online/" style="color:#b0b0b0;text-decoration:none">merceariaviana.online</a></p></footer>
+</body>
+</html>
+
+<!-- 9abf90e3f9ea2324d0deb246 -->
